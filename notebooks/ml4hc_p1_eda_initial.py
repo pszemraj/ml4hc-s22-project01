@@ -7,7 +7,7 @@
 import pandas as pd
 from pathlib import Path
 
-_root = Path(__file__).parent
+_root = Path(__file__).parent.parent
 
 _data_dir = _root / 'data'
 
@@ -26,7 +26,7 @@ ptbdb_norm = pd.read_csv(_data_dir / 'ptbdb_normal.csv', header=None).convert_dt
 
 print(f"info for ptbdb_abnormal.csv: ")
 pp.pprint(ptbdb_ab.info())
-print(f"info for ptbdb_normal.csv: {ptbdb_norm.info()}")
+print(f"\n\ninfo for ptbdb_normal.csv: {ptbdb_norm.info()}")
 pp.pprint(ptbdb_norm.info())
 # %%
 # %% [markdown]
