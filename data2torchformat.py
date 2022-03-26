@@ -1,5 +1,5 @@
 """
-data2torchformat.py - converts the dataframes to something that torch can use
+data2torchformat.py - converts the provided data to a format that torch can use (adding class labels and column names)
 """
 # %%
 
@@ -48,12 +48,14 @@ def mitbih_to_torchformat(data_dir, out_dir=None):
         df.to_csv(out_dir / f"torchfmt_{mit_file.name}", index=False)
 
     return out_dir
-
 # %%
-# reformat the mitbih dataset
+## define paths
 _root = Path(__file__).parent
 
 _data_dir = _root / 'data'
+
+# %%
+# reformat the mitbih dataset
 
 mit_out = mitbih_to_torchformat(_data_dir)
 print(f"wrotefiles to {mit_out.resolve()}")
@@ -61,7 +63,8 @@ print(f"wrotefiles to {mit_out.resolve()}")
 # %%
 
 
-def ptbdb_to_torchformat(data_dir, out_dir=None):
+def ptbdb_to_torchformat(data_dir, out_dir=None,
+                         random_state=42):
     """
     Converts the ptbdb dataset to a format that torch can use
     """
@@ -83,11 +86,14 @@ def ptbdb_to_torchformat(data_dir, out_dir=None):
         df["class_label"] = "abnormal" if "abnormal" in pt_file.name else "normal"
         full_data = full_data.append(df, ignore_index=True)
 
+    # shuffle the rows in the dataframe and write to csv
+    full_data = full_data.sample(frac=1, random_state=random_state).reset_index(drop=True) # because merging two CSVs of one class each
     full_data.to_csv(out_dir / "torchfmt_ptbdb_full.csv", index=False)
 
     return out_dir
 
 # %%
+# reformat the ptbdb dataset
 
 pt_out = ptbdb_to_torchformat(_data_dir)
 print(f"wrotefiles to {pt_out.resolve()}")
