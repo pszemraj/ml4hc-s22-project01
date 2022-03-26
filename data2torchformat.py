@@ -9,14 +9,15 @@ import pandas as pd
 
 
 mit_map = {
-    0:"N",
-    1:"S",
-    2:"V",
-    3:"F",
-    4:"Q",
+    0: "N",
+    1: "S",
+    2: "V",
+    3: "F",
+    4: "Q",
 }
 
 # %%
+
 
 def map_to_letters(numclass):
     """
@@ -26,21 +27,26 @@ def map_to_letters(numclass):
     assert numclass in mit_map.keys(), f"{numclass} not in {mit_map.keys()}"
     return mit_map[numclass]
 
+
 def mitbih_to_torchformat(data_dir, out_dir=None):
     """
     Converts the mitbih dataset to a format that torch can use
     """
     data_dir = Path(data_dir)
     if out_dir is None:
-        out_dir = data_dir / 'torch_format'
+        out_dir = data_dir / "torch_format"
         out_dir.mkdir(exist_ok=True)
 
-    mit_files = [f for f in data_dir.iterdir() if f.is_file() and "mitbih" in f.name and f.suffix == ".csv"]
+    mit_files = [
+        f
+        for f in data_dir.iterdir()
+        if f.is_file() and "mitbih" in f.name and f.suffix == ".csv"
+    ]
 
     for mit_file in mit_files:
         df = pd.read_csv(mit_file, header=None).convert_dtypes()
         _cols = list(df.columns)
-        _cols =[f"feat_{c}" for c in _cols]
+        _cols = [f"feat_{c}" for c in _cols]
         # update the last column name to be class label
         _cols[-1] = "class_label"
         df.columns = _cols
@@ -48,11 +54,13 @@ def mitbih_to_torchformat(data_dir, out_dir=None):
         df.to_csv(out_dir / f"torchfmt_{mit_file.name}", index=False)
 
     return out_dir
+
+
 # %%
 ## define paths
 _root = Path(__file__).parent
 
-_data_dir = _root / 'data'
+_data_dir = _root / "data"
 
 # %%
 # reformat the mitbih dataset
@@ -63,23 +71,26 @@ print(f"wrotefiles to {mit_out.resolve()}")
 # %%
 
 
-def ptbdb_to_torchformat(data_dir, out_dir=None,
-                         random_state=42, create_test=False):
+def ptbdb_to_torchformat(data_dir, out_dir=None, random_state=42, create_test=False):
     """
     Converts the ptbdb dataset to a format that torch can use
     """
     data_dir = Path(data_dir)
     if out_dir is None:
-        out_dir = data_dir / 'torch_format'
+        out_dir = data_dir / "torch_format"
         out_dir.mkdir(exist_ok=True)
 
-    pt_files = [f for f in data_dir.iterdir() if f.is_file() and "ptbdb" in f.name and f.suffix == ".csv"]
+    pt_files = [
+        f
+        for f in data_dir.iterdir()
+        if f.is_file() and "ptbdb" in f.name and f.suffix == ".csv"
+    ]
 
     full_data = pd.DataFrame()
     for pt_file in pt_files:
         df = pd.read_csv(pt_file, header=None).convert_dtypes()
         _cols = list(df.columns)
-        _cols =[f"feat_{c}" for c in _cols]
+        _cols = [f"feat_{c}" for c in _cols]
         # update the last column name to be class label
         _cols[-1] = "class_label"
         df.columns = _cols
@@ -89,17 +100,22 @@ def ptbdb_to_torchformat(data_dir, out_dir=None,
     # shuffle the rows in the dataframe and write to csv
     if create_test:
         # create two randomly sampled dataframes from full_data
-        train_df, test_df = full_data.sample(frac=0.8, random_state=random_state), full_data.sample(frac=0.2, random_state=random_state)
+        train_df, test_df = full_data.sample(
+            frac=0.8, random_state=random_state
+        ), full_data.sample(frac=0.2, random_state=random_state)
         # write the train and test dataframes to csv
         train_df.to_csv(out_dir / "torchfmt_ptbdb_train.csv", index=False)
         test_df.to_csv(out_dir / "torchfmt_ptbdb_test.csv", index=False)
         print(f"wrote train and test files with random_state={random_state}")
     else:
-        full_data = full_data.sample(frac=1, random_state=random_state).reset_index(drop=True) # because merging two CSVs of one class each
+        full_data = full_data.sample(frac=1, random_state=random_state).reset_index(
+            drop=True
+        )  # because merging two CSVs of one class each
         full_data.to_csv(out_dir / "torchfmt_ptbdb_full.csv", index=False)
         print(f"wrote ONE full file with random_state={random_state}")
 
     return out_dir
+
 
 # %%
 # reformat the ptbdb dataset

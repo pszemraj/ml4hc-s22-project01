@@ -9,20 +9,20 @@ from pathlib import Path
 
 _root = Path(__file__).parent.parent
 
-_data_dir = _root / 'data'
+_data_dir = _root / "data"
 
 # list of all files in the data directory
 _files = [f for f in _data_dir.iterdir() if f.is_file()]
-print(f'Found {len(_files)} files in {_data_dir}')
-
+print(f"Found {len(_files)} files in {_data_dir}")
 
 
 # %%
 
 # load report files for ptbdb
 import pprint as pp
-ptbdb_ab = pd.read_csv(_data_dir / 'ptbdb_abnormal.csv', header=None).convert_dtypes()
-ptbdb_norm = pd.read_csv(_data_dir / 'ptbdb_normal.csv', header=None).convert_dtypes()
+
+ptbdb_ab = pd.read_csv(_data_dir / "ptbdb_abnormal.csv", header=None).convert_dtypes()
+ptbdb_norm = pd.read_csv(_data_dir / "ptbdb_normal.csv", header=None).convert_dtypes()
 
 print(f"info for ptbdb_abnormal.csv: ")
 pp.pprint(ptbdb_ab.info())
@@ -34,9 +34,9 @@ pp.pprint(ptbdb_norm.info())
 #
 
 # %%
-#load the mitbih dataset
-mitbih_train = pd.read_csv(_data_dir / 'mitbih_train.csv').convert_dtypes()
-mitbih_test = pd.read_csv(_data_dir / 'mitbih_test.csv').convert_dtypes()
+# load the mitbih dataset
+mitbih_train = pd.read_csv(_data_dir / "mitbih_train.csv").convert_dtypes()
+mitbih_test = pd.read_csv(_data_dir / "mitbih_test.csv").convert_dtypes()
 
 print(f"info for mitbih_train.csv: {mitbih_train.info()}")
 print(f"info for mitbih_test.csv: {mitbih_test.info()}")
