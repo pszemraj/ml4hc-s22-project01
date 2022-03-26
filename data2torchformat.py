@@ -64,7 +64,7 @@ print(f"wrotefiles to {mit_out.resolve()}")
 
 
 def ptbdb_to_torchformat(data_dir, out_dir=None,
-                         random_state=42):
+                         random_state=42, create_test=False):
     """
     Converts the ptbdb dataset to a format that torch can use
     """
@@ -87,15 +87,24 @@ def ptbdb_to_torchformat(data_dir, out_dir=None,
         full_data = full_data.append(df, ignore_index=True)
 
     # shuffle the rows in the dataframe and write to csv
-    full_data = full_data.sample(frac=1, random_state=random_state).reset_index(drop=True) # because merging two CSVs of one class each
-    full_data.to_csv(out_dir / "torchfmt_ptbdb_full.csv", index=False)
+    if create_test:
+        # create two randomly sampled dataframes from full_data
+        train_df, test_df = full_data.sample(frac=0.8, random_state=random_state), full_data.sample(frac=0.2, random_state=random_state)
+        # write the train and test dataframes to csv
+        train_df.to_csv(out_dir / "torchfmt_ptbdb_train.csv", index=False)
+        test_df.to_csv(out_dir / "torchfmt_ptbdb_test.csv", index=False)
+        print(f"wrote train and test files with random_state={random_state}")
+    else:
+        full_data = full_data.sample(frac=1, random_state=random_state).reset_index(drop=True) # because merging two CSVs of one class each
+        full_data.to_csv(out_dir / "torchfmt_ptbdb_full.csv", index=False)
+        print(f"wrote ONE full file with random_state={random_state}")
 
     return out_dir
 
 # %%
 # reformat the ptbdb dataset
 
-pt_out = ptbdb_to_torchformat(_data_dir)
+pt_out = ptbdb_to_torchformat(_data_dir, create_test=True)
 print(f"wrotefiles to {pt_out.resolve()}")
 
 # %%
