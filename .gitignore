@@ -3,3 +3,7 @@
 
 # html files
 *.html
+
+# scratch files
+*scratch*
+*scratch/
