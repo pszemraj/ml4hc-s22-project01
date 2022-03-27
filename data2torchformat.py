@@ -7,7 +7,6 @@ from pathlib import Path
 
 import pandas as pd
 
-
 mit_map = {
     0: "N",
     1: "S",
