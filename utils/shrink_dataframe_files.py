@@ -6,7 +6,7 @@ import argparse
 from pathlib import Path
 
 import pandas as pd
-
+from general_utils import downcast_all, all_float_to_int
 
 def create_sm_datafile(input_file, out_dir=None, no_headers=True, verbose=False):
     """
@@ -38,7 +38,14 @@ def create_sm_datafile(input_file, out_dir=None, no_headers=True, verbose=False)
         df.columns = [f"feat_{c}" for c in df.columns]
     if verbose:
         print(f"{input_file.name} has {len(df)} rows")
-    df.to_feather(out_dir / f"{input_file.stem}.ftr")
+
+    sm_df = (
+        df.pipe(all_float_to_int)
+        .pipe(downcast_all, "float")
+        .pipe(downcast_all, "integer")
+        .pipe(downcast_all, target_type="unsigned", inital_type="integer")
+    )
+    sm_df.to_feather(out_dir / f"{input_file.stem}.ftr")
 
     return out_dir
 
@@ -101,4 +108,4 @@ if __name__ == "__main__":
             print(f"processing {csv_file.name}")
         _ = create_sm_datafile(csv_file, out_dir=output_path, no_headers=no_headers)
 
-    print(f"wrote files to {output_path.resolve()}")
+    print(f"\nWrote files to {output_path.resolve()}")
