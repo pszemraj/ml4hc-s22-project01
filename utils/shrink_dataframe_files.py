@@ -4,20 +4,35 @@
 
 import argparse
 from pathlib import Path
+
 import pandas as pd
 
 
 def create_sm_datafile(input_file, out_dir=None, no_headers=True, verbose=False):
     """
-    Converts the mitbih dataset to a format that torch can use
+    create_sm_datafile - given a dataframe, create a smaller version of the dataframe that is more memory efficient
+
+    Parameters
+    ----------
+    input_file : str, Path, the path to the input dataframe
+    out_dir : _type_, optional, the path to the output directory, by default None
+    no_headers : bool, optional, if the input files do not have headers, set this flag, by default True
+    verbose : bool, optional, print verbose output, by default False
+
+    Returns
+    -------
+    Path, the path to the output dataframe
     """
     input_file = Path(input_file)
     if out_dir is None:
         out_dir = input_file.parent / "data_as_feather"
         out_dir.mkdir(exist_ok=True)
 
-
-    df = pd.read_csv(input_file, header=None).convert_dtypes() if no_headers else pd.read_csv(input_file).convert_dtypes()
+    df = (
+        pd.read_csv(input_file, header=None).convert_dtypes()
+        if no_headers
+        else pd.read_csv(input_file).convert_dtypes()
+    )
     if no_headers:
         # update all column names to be feat_<column name>
         df.columns = [f"feat_{c}" for c in df.columns]
@@ -28,13 +43,13 @@ def create_sm_datafile(input_file, out_dir=None, no_headers=True, verbose=False)
     return out_dir
 
 
-
-
 def get_parser():
     """
     get_parser - a helper function for the argparse module
     """
-    parser = argparse.ArgumentParser(description="Convert a directory of dataframes to a directory of dataframes in a more memory efficient format")
+    parser = argparse.ArgumentParser(
+        description="Convert a directory of dataframes to a directory of dataframes in a more memory efficient format"
+    )
     parser.add_argument(
         "-i",
         "--input-path",
@@ -66,11 +81,14 @@ def get_parser():
     )
     return parser
 
+
 if __name__ == "__main__":
 
     args = get_parser().parse_args()
     input_path = Path(args.input_path)
-    output_path = Path(args.output_path) if args.output_path else input_path / "data_as_feather"
+    output_path = (
+        Path(args.output_path) if args.output_path else input_path / "data_as_feather"
+    )
     output_path.mkdir(exist_ok=True)
 
     no_headers = args.no_headers
