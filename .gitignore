@@ -1,5 +1,11 @@
-# data folder
+# basic system files
+*.vscode*
+*.DS_Store
+*__pycache__*
+
+# data folder & files
 *data/
+*.zip
 
 # html files
 *.html
