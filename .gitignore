@@ -3,8 +3,9 @@
 *.DS_Store
 *__pycache__*
 
-# data folder
+# data folder & files
 *data/
+*.zip
 
 # html files
 *.html
