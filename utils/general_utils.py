@@ -3,7 +3,7 @@
 """
 import os
 from pathlib import Path
-
+import re
 import pandas as pd
 
 
@@ -47,3 +47,12 @@ def downcast_all(df, target_type, inital_type=None):
     condition = lambda x: list(x.select_dtypes(include=[inital_type]).columns)
 
     return multi_assign(df_to_use, transform_fn, condition)
+
+
+def clean_file_name(file_path):
+    file_path = Path(file_path)
+    # Remove all non-alphanumeric characters
+    cln_base = re.sub(r"[^\w\s]", "", file_path.stem)
+    # Replace all spaces with underscores
+    cln_base = re.sub(r"\s", "_", cln_base)
+    return cln_base + file_path.suffix
