@@ -20,7 +20,15 @@ mit_map = {
 
 def map_to_letters(numclass):
     """
-    maps the class labels to letters
+    map_to_letters - maps the numbers to letters
+
+    Parameters
+    ----------
+    numclass : int, a number ID for the class
+
+    Returns
+    -------
+    str, a letter ID for the class
     """
     numclass = int(numclass)
     assert numclass in mit_map.keys(), f"{numclass} not in {mit_map.keys()}"
@@ -29,8 +37,18 @@ def map_to_letters(numclass):
 
 def mitbih_to_torchformat(data_dir, out_dir=None):
     """
-    Converts the mitbih dataset to a format that torch can use
+    mitbih_to_torchformat - converts the mitbih dataset to a format that torch can use
+
+    Parameters
+    ----------
+    data_dir : _pathlib.Path, the directory containing the mitbih dataset
+    out_dir : _pathlib.Path, the directory to write the torch formatted dataset to, defaults to data_dir/torch_format
+
+    Returns
+    -------
+    _pathlib.Path, the directory containing the torch formatted dataset
     """
+
     data_dir = Path(data_dir)
     if out_dir is None:
         out_dir = data_dir / "torch_format"
@@ -72,7 +90,18 @@ print(f"wrotefiles to {mit_out.resolve()}")
 
 def ptbdb_to_torchformat(data_dir, out_dir=None, random_state=42, create_test=False):
     """
-    Converts the ptbdb dataset to a format that torch can use
+    ptbdb_to_torchformat - converts the ptbdb dataset to a format that torch can use
+
+    Parameters
+    ----------
+    data_dir : _pathlib.Path, the directory containing the ptbdb dataset
+    out_dir : _pathlib.Path, the directory to write the torch formatted dataset to, defaults to data_dir/torch_format
+    random_state : int, optional, the random state to use for splitting the dataset, defaults to 42
+    create_test : bool, optional, whether to create a test set, defaults to False
+
+    Returns
+    -------
+    _pathlib.Path, the directory containing the torch formatted dataset
     """
     data_dir = Path(data_dir)
     if out_dir is None:
