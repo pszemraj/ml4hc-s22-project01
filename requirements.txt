@@ -1,3 +1,4 @@
 pandas
 pandas-profiling
-pyarrow
+requests
+tqdm
