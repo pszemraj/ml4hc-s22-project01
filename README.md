@@ -8,11 +8,6 @@ this repo contains the code for the first problem of the Machine Learning for He
 
 This repo primarily aims as a central home for the data processing piece, EDA and analysis, as well as the model training and evaluation.
 
-## data
-
-- the easiest way to get the data is from this open-access dropbox [link](https://www.dropbox.com/sh/hwv3msz2mdfxki1/AACOk6t8z6hNfuc3s7xM9K7-a?dl=0) as the CSV files are large. This contains both the original datafiles (as provided by the course instructors) and the processed datafiles (reformatted by the `data2torchformat.py` script).
-- TODO: add data download script for local use
-
 ## Installation
 
 - for using the repo locally (EDA, analysis) the primary method to install is clone + pip install.
@@ -24,5 +19,14 @@ This repo primarily aims as a central home for the data processing piece, EDA an
 2. set working directory to the root of the repo (`cd ml4hc-s22-project01`)
 3. Install required packages with `pip install -r requirements.txt`
 4. now can run scripts with `python main.py`
+
+## data
+
+Please make sure you follow the steps in install section to install the required packages first. Data for the project is available in several different ways, and was used in both unaltered as well as cleaned/rearranged ways.
+
+- modified versions of the original data and reformatted pytorch data are available in the repo by default as [Apache feather format](https://arrow.apache.org/docs/python/pandas.html) files to stay under git LFS limit space.
+  - to read such a file, simply use `pd.read_feather(file_path)`
+- the easiest way to get the data in original formatting is by `python download_data.py` to download the data both as originally provided and in torch format
+- Outside of python, another way to get the data is from this open-access dropbox [link](https://www.dropbox.com/sh/hwv3msz2mdfxki1/AACOk6t8z6hNfuc3s7xM9K7-a?dl=0) as the CSV files are large. This contains both the original datafiles (as provided by the course instructors) and the processed datafiles (reformatted by the `data2torchformat.py` script).
 
 ---
