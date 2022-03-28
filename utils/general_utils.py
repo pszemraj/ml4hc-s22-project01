@@ -17,6 +17,7 @@ def float_to_int(ser):
     except ValueError:
         return ser
 
+
 def multi_assign(df, transform_fn, condition):
     df_to_use = df.copy()
 

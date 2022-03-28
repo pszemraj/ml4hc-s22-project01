@@ -1,4 +1,3 @@
-
 """
     download_data.py - downloads the data from the URL and saves it to the specified directory
 """
@@ -10,6 +9,7 @@ import requests
 from tqdm.auto import tqdm
 
 from utils.general_utils import clean_file_name
+
 
 def download_URL(url: str, file=None, dlpath=None, verbose=False):
     """

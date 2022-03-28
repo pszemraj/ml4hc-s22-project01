@@ -8,6 +8,7 @@ from pathlib import Path
 import pandas as pd
 from general_utils import downcast_all, all_float_to_int
 
+
 def create_sm_datafile(input_file, out_dir=None, no_headers=True, verbose=False):
     """
     create_sm_datafile - given a dataframe, create a smaller version of the dataframe that is more memory efficient
