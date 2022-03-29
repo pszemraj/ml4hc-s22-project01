@@ -1,8 +1,9 @@
+autoviz
 pandas
 pandas-profiling
+
+plotly
 requests
 tqdm
 pyarrow
 openpyxl
-plotly
-kaleido
