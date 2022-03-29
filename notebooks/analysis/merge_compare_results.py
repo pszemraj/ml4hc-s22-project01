@@ -219,7 +219,6 @@ if len(not_in_map) > 0:
 # %%
 
 
-
 for f in _autoML_csv_paths:
     df = pd.read_csv(f).convert_dtypes()
     _cols = list(df.columns)
@@ -269,5 +268,3 @@ overall_results.reset_index(drop=True, inplace=True)
 
 overall_results.to_csv(_save_header.with_suffix(".csv"), index=False)
 overall_results.to_excel(_save_header.with_suffix(".xlsx"), index=False)
-
-
