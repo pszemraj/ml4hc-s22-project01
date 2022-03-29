@@ -3,3 +3,4 @@ pandas-profiling
 requests
 tqdm
 pyarrow
+openpyxl
