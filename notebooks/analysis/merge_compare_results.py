@@ -16,6 +16,22 @@ _results_subdirs = [d for d in results_dir.iterdir() if d.is_dir()]
 result_dirs = {d.name: d for d in _results_subdirs}
 pp.pprint(list(result_dirs.keys()))
 
+
+# %%
+
+# LE GRAND MAPPING DICTIONNARY
+
+metric_map = {
+    'F1': 'f1_score',
+    'Accuracy': 'accuracy',
+    'MCC': 'matthews_corrcoef',
+    'Balanced Accuracy': 'balanced_accuracy_score',
+    'AUC': 'roc_auc_score',
+    'Prec.': 'precision_score',
+    'Recall': 'recall_score',
+    'Kappa': 'cohen_kappa_score',
+
+}
 # %%
 
 # handle initial-training
@@ -36,6 +52,12 @@ def get_unique_cols(csv_paths:list):
     return _cols
 
 get_unique_cols(_csv_paths)
+
+# %% [markdown]
+# - the first datasets define mandatory mapping between the MITBIH classes and the letters used in the dataset
+
+# `{'accuracy', 'balanced_accuracy_score', 'f1_score', 'matthews_corrcoef', 'model_filename'}`
+
 
 # %%
 # load each dataframe and pivot the dataframe to have the columns as the class labels, except for the model file name
@@ -80,6 +102,56 @@ key_phrase = "fit_search"
 # load CSV paths in initial-training directory that contain the key phrase
 _ensemble_root = result_dirs["ensembling-models"]
 _csv_paths = [f for f in _ensemble_root.iterdir() if f.is_file() and key_phrase in f.name.lower()]
-print(f"{len(_csv_paths)} CSV files found in {_ensemble_root}")
+print(f"{len(_csv_paths)} CSV files found in {_ensemble_root.name}")
 
 # %%
+
+col_names = get_unique_cols(_csv_paths)
+print(f"{col_names} columns found in {_ensemble_root.name}")
+
+not_in_map = [c for c in col_names if c not in metric_map.keys()]
+if len(not_in_map) > 0:
+    print(f"{len(not_in_map)} columns not in map: {not_in_map}")
+# %%
+
+def check_mapping(col_name: str, mapping: dict, exclude_list: list=None):
+    """
+    check_mapping - checks if a column name is in the mapping dictionary
+
+    Parameters
+    ----------
+    col_name : str, the column name to check
+    mapping : dict, the mapping dictionary
+
+    Returns
+    -------
+    bool, whether the column name is in the mapping dictionary
+    """
+    if col_name in exclude_list:
+        return col_name
+    if col_name in mapping.keys() :
+        return mapping[col_name]
+    else:
+        return False
+
+for f in _csv_paths:
+    df = pd.read_csv(f)
+    _cols = list(df.columns)
+    # replace the column name Model by 'model_filename'
+    _cols = [c if c != "Model" else "model_filename" for c in _cols]
+    df.columns = _cols
+    new_cols = []
+    for colname in list(df.columns):
+        std_name = check_mapping(colname, metric_map, exclude_list=["model_filename"])
+        if not std_name:
+            del df[colname]
+        else:
+            new_cols.append(std_name)
+
+    df.columns = new_cols
+    _cols = list(df.columns)
+    _cols.remove("model_filename")
+    # all column entries except for the model file name now become one column titled performance_metric using pd.melt
+    df = pd.melt(df, id_vars=["model_filename"], value_vars=_cols, var_name="performance_metric", value_name="metric_value")
+    df['dataset'] = "mitbih" if "mitbih" in f.name.lower() else "ptbdb"
+    overall_results = pd.concat([overall_results, df], axis=0)
