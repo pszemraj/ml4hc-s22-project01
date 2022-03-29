@@ -1,0 +1,400 @@
+model_filename,performance_metric,metric_value,dataset,source
+BidirGRU_BS=1024_MITBIH_biGRU,balanced_accuracy_score,0.9038502447454684,mitbih,initial-training
+BILSTM187_mitbih_MITBIH,balanced_accuracy_score,0.8975729497533749,mitbih,initial-training
+BILSTM187_mitbih_MITBIH_biGRU,balanced_accuracy_score,0.8856538925486467,mitbih,initial-training
+GRU_mitbih_MITBIH,balanced_accuracy_score,0.8563174189814159,mitbih,initial-training
+CNN_mitbih_MITBIH_biGRU,balanced_accuracy_score,0.8478730878183471,mitbih,initial-training
+CNN_mitbih_MITBIH,balanced_accuracy_score,0.8329139160857055,mitbih,initial-training
+LTSM_mitbih_MITBIH,balanced_accuracy_score,0.8261099009899127,mitbih,initial-training
+SIMPLE_RNN_mitbih_MITBIH,balanced_accuracy_score,0.7536954187875319,mitbih,initial-training
+BILSTM_mitbih_MITBIH,balanced_accuracy_score,0.6573433022506142,mitbih,initial-training
+BIRNN187_mitbih_MITBIH,balanced_accuracy_score,0.5779338075685911,mitbih,initial-training
+RNN_mitbih_MITBIH_biGRU,balanced_accuracy_score,0.5561785175832606,mitbih,initial-training
+BidirGRU_MITBIH,balanced_accuracy_score,0.5362450657966464,mitbih,initial-training
+BidirGRU_MITBIH_biGRU,balanced_accuracy_score,0.5307456485194285,mitbih,initial-training
+BIRNN10_mitbih_MITBIH,balanced_accuracy_score,0.5143747810448643,mitbih,initial-training
+RNN_mitbih_MITBIH,balanced_accuracy_score,0.4993741968691587,mitbih,initial-training
+BIRNN187_mitbih_MITBIH_biGRU,balanced_accuracy_score,0.4850607933122354,mitbih,initial-training
+BILSTM10_mitbih_MITBIH_biGRU,balanced_accuracy_score,0.2,mitbih,initial-training
+BILSTM187_ptb_MITBIH,balanced_accuracy_score,0.2,mitbih,initial-training
+BidirGRU_BS=1024_MITBIH_biGRU,accuracy,0.9871185821304588,mitbih,initial-training
+BILSTM187_mitbih_MITBIH,accuracy,0.9859309336744017,mitbih,initial-training
+BILSTM187_mitbih_MITBIH_biGRU,accuracy,0.9845605700712587,mitbih,initial-training
+GRU_mitbih_MITBIH,accuracy,0.9789877580851452,mitbih,initial-training
+CNN_mitbih_MITBIH_biGRU,accuracy,0.9757445642243742,mitbih,initial-training
+CNN_mitbih_MITBIH,accuracy,0.9744198794080028,mitbih,initial-training
+LTSM_mitbih_MITBIH,accuracy,0.970856934039832,mitbih,initial-training
+SIMPLE_RNN_mitbih_MITBIH,accuracy,0.9549607162433764,mitbih,initial-training
+BILSTM_mitbih_MITBIH,accuracy,0.9524483829709482,mitbih,initial-training
+BIRNN187_mitbih_MITBIH,accuracy,0.9300200986661794,mitbih,initial-training
+RNN_mitbih_MITBIH_biGRU,accuracy,0.929654668372008,mitbih,initial-training
+BidirGRU_MITBIH,accuracy,0.9359583409464644,mitbih,initial-training
+BidirGRU_MITBIH_biGRU,accuracy,0.9298830623058651,mitbih,initial-training
+BIRNN10_mitbih_MITBIH,accuracy,0.9236707473049516,mitbih,initial-training
+RNN_mitbih_MITBIH,accuracy,0.9191485474145806,mitbih,initial-training
+BIRNN187_mitbih_MITBIH_biGRU,accuracy,0.922848529143066,mitbih,initial-training
+BILSTM10_mitbih_MITBIH_biGRU,accuracy,0.8276082587246483,mitbih,initial-training
+BILSTM187_ptb_MITBIH,accuracy,0.8276082587246483,mitbih,initial-training
+BidirGRU_BS=1024_MITBIH_biGRU,f1_score,0.9247785679882142,mitbih,initial-training
+BILSTM187_mitbih_MITBIH,f1_score,0.916334577057254,mitbih,initial-training
+BILSTM187_mitbih_MITBIH_biGRU,f1_score,0.910497684848108,mitbih,initial-training
+GRU_mitbih_MITBIH,f1_score,0.8882279762685119,mitbih,initial-training
+CNN_mitbih_MITBIH_biGRU,f1_score,0.8739764315520855,mitbih,initial-training
+CNN_mitbih_MITBIH,f1_score,0.8638296783291999,mitbih,initial-training
+LTSM_mitbih_MITBIH,f1_score,0.8524442325602617,mitbih,initial-training
+SIMPLE_RNN_mitbih_MITBIH,f1_score,0.7716234850140811,mitbih,initial-training
+BILSTM_mitbih_MITBIH,f1_score,0.7160623197087354,mitbih,initial-training
+BIRNN187_mitbih_MITBIH,f1_score,0.6162829579721304,mitbih,initial-training
+RNN_mitbih_MITBIH_biGRU,f1_score,0.6078152127867309,mitbih,initial-training
+BidirGRU_MITBIH,f1_score,0.5750313546007909,mitbih,initial-training
+BidirGRU_MITBIH_biGRU,f1_score,0.5710219816128614,mitbih,initial-training
+BIRNN10_mitbih_MITBIH,f1_score,0.5465114103074671,mitbih,initial-training
+RNN_mitbih_MITBIH,f1_score,0.5256253196721415,mitbih,initial-training
+BIRNN187_mitbih_MITBIH_biGRU,f1_score,0.5073136548178429,mitbih,initial-training
+BILSTM10_mitbih_MITBIH_biGRU,f1_score,0.1811347163209197,mitbih,initial-training
+BILSTM187_ptb_MITBIH,f1_score,0.1811347163209197,mitbih,initial-training
+BidirGRU_BS=1024_MITBIH_biGRU,matthews_corrcoef,0.957311507919293,mitbih,initial-training
+BILSTM187_mitbih_MITBIH,matthews_corrcoef,0.9533450413269956,mitbih,initial-training
+BILSTM187_mitbih_MITBIH_biGRU,matthews_corrcoef,0.9486790567025004,mitbih,initial-training
+GRU_mitbih_MITBIH,matthews_corrcoef,0.929741581387028,mitbih,initial-training
+CNN_mitbih_MITBIH_biGRU,matthews_corrcoef,0.9188782481009926,mitbih,initial-training
+CNN_mitbih_MITBIH,matthews_corrcoef,0.9141863899957146,mitbih,initial-training
+LTSM_mitbih_MITBIH,matthews_corrcoef,0.9020618266044944,mitbih,initial-training
+SIMPLE_RNN_mitbih_MITBIH,matthews_corrcoef,0.8474881441125122,mitbih,initial-training
+BILSTM_mitbih_MITBIH,matthews_corrcoef,0.8354867493404948,mitbih,initial-training
+BIRNN187_mitbih_MITBIH,matthews_corrcoef,0.7540117608000284,mitbih,initial-training
+RNN_mitbih_MITBIH_biGRU,matthews_corrcoef,0.7497581686917232,mitbih,initial-training
+BidirGRU_MITBIH,matthews_corrcoef,0.7726782395066017,mitbih,initial-training
+BidirGRU_MITBIH_biGRU,matthews_corrcoef,0.7500463999864788,mitbih,initial-training
+BIRNN10_mitbih_MITBIH,matthews_corrcoef,0.7256149008752992,mitbih,initial-training
+RNN_mitbih_MITBIH,matthews_corrcoef,0.707648987093133,mitbih,initial-training
+BIRNN187_mitbih_MITBIH_biGRU,matthews_corrcoef,0.7206485021276984,mitbih,initial-training
+BILSTM10_mitbih_MITBIH_biGRU,matthews_corrcoef,0.0,mitbih,initial-training
+BILSTM187_ptb_MITBIH,matthews_corrcoef,0.0,mitbih,initial-training
+GRU_ptb_preds,balanced_accuracy_score,0.9839287205427992,ptbdb,initial-training
+BidirGRU_ptb_preds,balanced_accuracy_score,0.983119555335492,ptbdb,initial-training
+BILSTM187_ptb-2_preds,balanced_accuracy_score,0.9808364274885653,ptbdb,initial-training
+CNN_PTB_preds,balanced_accuracy_score,0.898383904198603,ptbdb,initial-training
+RNN_PTB_preds,balanced_accuracy_score,0.595475613901176,ptbdb,initial-training
+GRU_ptb_preds,accuracy,0.9883201648917898,ptbdb,initial-training
+BidirGRU_ptb_preds,accuracy,0.9866025420817588,ptbdb,initial-training
+BILSTM187_ptb-2_preds,accuracy,0.9838543455857094,ptbdb,initial-training
+CNN_PTB_preds,accuracy,0.9185846788045344,ptbdb,initial-training
+RNN_PTB_preds,accuracy,0.7265544486430779,ptbdb,initial-training
+GRU_ptb_preds,roc_auc_score,0.9839287205427992,ptbdb,initial-training
+BidirGRU_ptb_preds,roc_auc_score,0.983119555335492,ptbdb,initial-training
+BILSTM187_ptb-2_preds,roc_auc_score,0.9808364274885653,ptbdb,initial-training
+CNN_PTB_preds,roc_auc_score,0.898383904198603,ptbdb,initial-training
+RNN_PTB_preds,roc_auc_score,0.5954756139011759,ptbdb,initial-training
+GRU_ptb_preds,f1_score,0.9919278252611586,ptbdb,initial-training
+BidirGRU_ptb_preds,f1_score,0.9907253269916766,ptbdb,initial-training
+BILSTM187_ptb-2_preds,f1_score,0.988806858775899,ptbdb,initial-training
+CNN_PTB_preds,f1_score,0.9436385255648038,ptbdb,initial-training
+RNN_PTB_preds,f1_score,0.824669603524229,ptbdb,initial-training
+GRU_ptb_preds,matthews_corrcoef,0.9708329868409152,ptbdb,initial-training
+BidirGRU_ptb_preds,matthews_corrcoef,0.9666069478319044,ptbdb,initial-training
+BILSTM187_ptb-2_preds,matthews_corrcoef,0.9598570441539797,ptbdb,initial-training
+CNN_PTB_preds,matthews_corrcoef,0.7970711295992947,ptbdb,initial-training
+RNN_PTB_preds,matthews_corrcoef,0.2318812596053182,ptbdb,initial-training
+Logistic Regression,accuracy,0.9888,mitbih,ensembling-models
+Ridge Classifier,accuracy,0.9888,mitbih,ensembling-models
+SVM - Linear Kernel,accuracy,0.9887,mitbih,ensembling-models
+Linear Discriminant Analysis,accuracy,0.9884,mitbih,ensembling-models
+K Neighbors Classifier,accuracy,0.988,mitbih,ensembling-models
+CatBoost Classifier,accuracy,0.9875,mitbih,ensembling-models
+Random Forest Classifier,accuracy,0.9873,mitbih,ensembling-models
+Gradient Boosting Classifier,accuracy,0.9873,mitbih,ensembling-models
+Light Gradient Boosting Machine,accuracy,0.9872,mitbih,ensembling-models
+Extra Trees Classifier,accuracy,0.9871,mitbih,ensembling-models
+Extreme Gradient Boosting,accuracy,0.9869,mitbih,ensembling-models
+Decision Tree Classifier,accuracy,0.9855,mitbih,ensembling-models
+Quadratic Discriminant Analysis,accuracy,0.9767,mitbih,ensembling-models
+Ada Boost Classifier,accuracy,0.8748,mitbih,ensembling-models
+Dummy Classifier,accuracy,0.8292,mitbih,ensembling-models
+Naive Bayes,accuracy,0.1119,mitbih,ensembling-models
+Logistic Regression,roc_auc_score,0.9897,mitbih,ensembling-models
+Ridge Classifier,roc_auc_score,0.0,mitbih,ensembling-models
+SVM - Linear Kernel,roc_auc_score,0.0,mitbih,ensembling-models
+Linear Discriminant Analysis,roc_auc_score,0.9828,mitbih,ensembling-models
+K Neighbors Classifier,roc_auc_score,0.9843,mitbih,ensembling-models
+CatBoost Classifier,roc_auc_score,0.9893,mitbih,ensembling-models
+Random Forest Classifier,roc_auc_score,0.9858,mitbih,ensembling-models
+Gradient Boosting Classifier,roc_auc_score,0.9885,mitbih,ensembling-models
+Light Gradient Boosting Machine,roc_auc_score,0.9836,mitbih,ensembling-models
+Extra Trees Classifier,roc_auc_score,0.9815,mitbih,ensembling-models
+Extreme Gradient Boosting,roc_auc_score,0.9888,mitbih,ensembling-models
+Decision Tree Classifier,roc_auc_score,0.9699,mitbih,ensembling-models
+Quadratic Discriminant Analysis,roc_auc_score,0.9407,mitbih,ensembling-models
+Ada Boost Classifier,roc_auc_score,0.204,mitbih,ensembling-models
+Dummy Classifier,roc_auc_score,0.5,mitbih,ensembling-models
+Naive Bayes,roc_auc_score,0.9794,mitbih,ensembling-models
+Logistic Regression,recall_score,0.8994,mitbih,ensembling-models
+Ridge Classifier,recall_score,0.9018,mitbih,ensembling-models
+SVM - Linear Kernel,recall_score,0.9021,mitbih,ensembling-models
+Linear Discriminant Analysis,recall_score,0.9079,mitbih,ensembling-models
+K Neighbors Classifier,recall_score,0.8911,mitbih,ensembling-models
+CatBoost Classifier,recall_score,0.9007,mitbih,ensembling-models
+Random Forest Classifier,recall_score,0.8937,mitbih,ensembling-models
+Gradient Boosting Classifier,recall_score,0.8971,mitbih,ensembling-models
+Light Gradient Boosting Machine,recall_score,0.8958,mitbih,ensembling-models
+Extra Trees Classifier,recall_score,0.8914,mitbih,ensembling-models
+Extreme Gradient Boosting,recall_score,0.8976,mitbih,ensembling-models
+Decision Tree Classifier,recall_score,0.8831,mitbih,ensembling-models
+Quadratic Discriminant Analysis,recall_score,0.7788,mitbih,ensembling-models
+Ada Boost Classifier,recall_score,0.44,mitbih,ensembling-models
+Dummy Classifier,recall_score,0.2,mitbih,ensembling-models
+Naive Bayes,recall_score,0.6004,mitbih,ensembling-models
+Logistic Regression,precision_score,0.9887,mitbih,ensembling-models
+Ridge Classifier,precision_score,0.9886,mitbih,ensembling-models
+SVM - Linear Kernel,precision_score,0.9885,mitbih,ensembling-models
+Linear Discriminant Analysis,precision_score,0.9883,mitbih,ensembling-models
+K Neighbors Classifier,precision_score,0.9878,mitbih,ensembling-models
+CatBoost Classifier,precision_score,0.9874,mitbih,ensembling-models
+Random Forest Classifier,precision_score,0.9871,mitbih,ensembling-models
+Gradient Boosting Classifier,precision_score,0.9871,mitbih,ensembling-models
+Light Gradient Boosting Machine,precision_score,0.987,mitbih,ensembling-models
+Extra Trees Classifier,precision_score,0.9869,mitbih,ensembling-models
+Extreme Gradient Boosting,precision_score,0.9867,mitbih,ensembling-models
+Decision Tree Classifier,precision_score,0.9852,mitbih,ensembling-models
+Quadratic Discriminant Analysis,precision_score,0.9764,mitbih,ensembling-models
+Ada Boost Classifier,precision_score,0.8732,mitbih,ensembling-models
+Dummy Classifier,precision_score,0.6876,mitbih,ensembling-models
+Naive Bayes,precision_score,0.1649,mitbih,ensembling-models
+Logistic Regression,f1_score,0.9885,mitbih,ensembling-models
+Ridge Classifier,f1_score,0.9884,mitbih,ensembling-models
+SVM - Linear Kernel,f1_score,0.9884,mitbih,ensembling-models
+Linear Discriminant Analysis,f1_score,0.9882,mitbih,ensembling-models
+K Neighbors Classifier,f1_score,0.9876,mitbih,ensembling-models
+CatBoost Classifier,f1_score,0.9872,mitbih,ensembling-models
+Random Forest Classifier,f1_score,0.987,mitbih,ensembling-models
+Gradient Boosting Classifier,f1_score,0.9871,mitbih,ensembling-models
+Light Gradient Boosting Machine,f1_score,0.9869,mitbih,ensembling-models
+Extra Trees Classifier,f1_score,0.9868,mitbih,ensembling-models
+Extreme Gradient Boosting,f1_score,0.9866,mitbih,ensembling-models
+Decision Tree Classifier,f1_score,0.9851,mitbih,ensembling-models
+Quadratic Discriminant Analysis,f1_score,0.9738,mitbih,ensembling-models
+Ada Boost Classifier,f1_score,0.8339,mitbih,ensembling-models
+Dummy Classifier,f1_score,0.7518,mitbih,ensembling-models
+Naive Bayes,f1_score,0.1054,mitbih,ensembling-models
+Logistic Regression,cohen_kappa_score,0.9624,mitbih,ensembling-models
+Ridge Classifier,cohen_kappa_score,0.9623,mitbih,ensembling-models
+SVM - Linear Kernel,cohen_kappa_score,0.9621,mitbih,ensembling-models
+Linear Discriminant Analysis,cohen_kappa_score,0.9611,mitbih,ensembling-models
+K Neighbors Classifier,cohen_kappa_score,0.9596,mitbih,ensembling-models
+CatBoost Classifier,cohen_kappa_score,0.958,mitbih,ensembling-models
+Random Forest Classifier,cohen_kappa_score,0.9575,mitbih,ensembling-models
+Gradient Boosting Classifier,cohen_kappa_score,0.9576,mitbih,ensembling-models
+Light Gradient Boosting Machine,cohen_kappa_score,0.9571,mitbih,ensembling-models
+Extra Trees Classifier,cohen_kappa_score,0.9569,mitbih,ensembling-models
+Extreme Gradient Boosting,cohen_kappa_score,0.9561,mitbih,ensembling-models
+Decision Tree Classifier,cohen_kappa_score,0.9514,mitbih,ensembling-models
+Quadratic Discriminant Analysis,cohen_kappa_score,0.9188,mitbih,ensembling-models
+Ada Boost Classifier,cohen_kappa_score,0.3979,mitbih,ensembling-models
+Dummy Classifier,cohen_kappa_score,0.0,mitbih,ensembling-models
+Naive Bayes,cohen_kappa_score,0.0997,mitbih,ensembling-models
+Logistic Regression,matthews_corrcoef,0.9627,mitbih,ensembling-models
+Ridge Classifier,matthews_corrcoef,0.9625,mitbih,ensembling-models
+SVM - Linear Kernel,matthews_corrcoef,0.9623,mitbih,ensembling-models
+Linear Discriminant Analysis,matthews_corrcoef,0.9613,mitbih,ensembling-models
+K Neighbors Classifier,matthews_corrcoef,0.9598,mitbih,ensembling-models
+CatBoost Classifier,matthews_corrcoef,0.9582,mitbih,ensembling-models
+Random Forest Classifier,matthews_corrcoef,0.9577,mitbih,ensembling-models
+Gradient Boosting Classifier,matthews_corrcoef,0.9578,mitbih,ensembling-models
+Light Gradient Boosting Machine,matthews_corrcoef,0.9573,mitbih,ensembling-models
+Extra Trees Classifier,matthews_corrcoef,0.957,mitbih,ensembling-models
+Extreme Gradient Boosting,matthews_corrcoef,0.9562,mitbih,ensembling-models
+Decision Tree Classifier,matthews_corrcoef,0.9516,mitbih,ensembling-models
+Quadratic Discriminant Analysis,matthews_corrcoef,0.9209,mitbih,ensembling-models
+Ada Boost Classifier,matthews_corrcoef,0.4772,mitbih,ensembling-models
+Dummy Classifier,matthews_corrcoef,0.0,mitbih,ensembling-models
+Naive Bayes,matthews_corrcoef,0.3674,mitbih,ensembling-models
+Logistic Regression,balanced_accuracy_score,0.8994,mitbih,ensembling-models
+Ridge Classifier,balanced_accuracy_score,0.9018,mitbih,ensembling-models
+SVM - Linear Kernel,balanced_accuracy_score,0.9021,mitbih,ensembling-models
+Linear Discriminant Analysis,balanced_accuracy_score,0.9079,mitbih,ensembling-models
+K Neighbors Classifier,balanced_accuracy_score,0.8911,mitbih,ensembling-models
+CatBoost Classifier,balanced_accuracy_score,0.9007,mitbih,ensembling-models
+Random Forest Classifier,balanced_accuracy_score,0.8937,mitbih,ensembling-models
+Gradient Boosting Classifier,balanced_accuracy_score,0.8971,mitbih,ensembling-models
+Light Gradient Boosting Machine,balanced_accuracy_score,0.8958,mitbih,ensembling-models
+Extra Trees Classifier,balanced_accuracy_score,0.8914,mitbih,ensembling-models
+Extreme Gradient Boosting,balanced_accuracy_score,0.8976,mitbih,ensembling-models
+Decision Tree Classifier,balanced_accuracy_score,0.8831,mitbih,ensembling-models
+Quadratic Discriminant Analysis,balanced_accuracy_score,0.7788,mitbih,ensembling-models
+Ada Boost Classifier,balanced_accuracy_score,0.44,mitbih,ensembling-models
+Dummy Classifier,balanced_accuracy_score,0.2,mitbih,ensembling-models
+Naive Bayes,balanced_accuracy_score,0.6004,mitbih,ensembling-models
+Extra Trees Classifier,accuracy,0.9907,ptbdb,ensembling-models
+K Neighbors Classifier,accuracy,0.9897,ptbdb,ensembling-models
+CatBoost Classifier,accuracy,0.9897,ptbdb,ensembling-models
+Logistic Regression,accuracy,0.9892,ptbdb,ensembling-models
+Decision Tree Classifier,accuracy,0.9892,ptbdb,ensembling-models
+Ridge Classifier,accuracy,0.9892,ptbdb,ensembling-models
+Linear Discriminant Analysis,accuracy,0.9892,ptbdb,ensembling-models
+Extreme Gradient Boosting,accuracy,0.9892,ptbdb,ensembling-models
+Light Gradient Boosting Machine,accuracy,0.9892,ptbdb,ensembling-models
+Random Forest Classifier,accuracy,0.9887,ptbdb,ensembling-models
+Gradient Boosting Classifier,accuracy,0.9887,ptbdb,ensembling-models
+Ada Boost Classifier,accuracy,0.9867,ptbdb,ensembling-models
+SVM - Linear Kernel,accuracy,0.9858,ptbdb,ensembling-models
+Naive Bayes,accuracy,0.9833,ptbdb,ensembling-models
+Quadratic Discriminant Analysis,accuracy,0.9818,ptbdb,ensembling-models
+Dummy Classifier,accuracy,0.7207,ptbdb,ensembling-models
+Extra Trees Classifier,roc_auc_score,0.9884,ptbdb,ensembling-models
+K Neighbors Classifier,roc_auc_score,0.9941,ptbdb,ensembling-models
+CatBoost Classifier,roc_auc_score,0.9972,ptbdb,ensembling-models
+Logistic Regression,roc_auc_score,0.997,ptbdb,ensembling-models
+Decision Tree Classifier,roc_auc_score,0.9858,ptbdb,ensembling-models
+Ridge Classifier,roc_auc_score,0.0,ptbdb,ensembling-models
+Linear Discriminant Analysis,roc_auc_score,0.9901,ptbdb,ensembling-models
+Extreme Gradient Boosting,roc_auc_score,0.9972,ptbdb,ensembling-models
+Light Gradient Boosting Machine,roc_auc_score,0.9973,ptbdb,ensembling-models
+Random Forest Classifier,roc_auc_score,0.994,ptbdb,ensembling-models
+Gradient Boosting Classifier,roc_auc_score,0.9971,ptbdb,ensembling-models
+Ada Boost Classifier,roc_auc_score,0.997,ptbdb,ensembling-models
+SVM - Linear Kernel,roc_auc_score,0.0,ptbdb,ensembling-models
+Naive Bayes,roc_auc_score,0.997,ptbdb,ensembling-models
+Quadratic Discriminant Analysis,roc_auc_score,0.9966,ptbdb,ensembling-models
+Dummy Classifier,roc_auc_score,0.5,ptbdb,ensembling-models
+Extra Trees Classifier,recall_score,0.9959,ptbdb,ensembling-models
+K Neighbors Classifier,recall_score,0.9945,ptbdb,ensembling-models
+CatBoost Classifier,recall_score,0.9959,ptbdb,ensembling-models
+Logistic Regression,recall_score,0.9945,ptbdb,ensembling-models
+Decision Tree Classifier,recall_score,0.9945,ptbdb,ensembling-models
+Ridge Classifier,recall_score,0.9945,ptbdb,ensembling-models
+Linear Discriminant Analysis,recall_score,0.9945,ptbdb,ensembling-models
+Extreme Gradient Boosting,recall_score,0.9959,ptbdb,ensembling-models
+Light Gradient Boosting Machine,recall_score,0.9952,ptbdb,ensembling-models
+Random Forest Classifier,recall_score,0.9959,ptbdb,ensembling-models
+Gradient Boosting Classifier,recall_score,0.9959,ptbdb,ensembling-models
+Ada Boost Classifier,recall_score,0.9898,ptbdb,ensembling-models
+SVM - Linear Kernel,recall_score,0.9911,ptbdb,ensembling-models
+Naive Bayes,recall_score,0.9809,ptbdb,ensembling-models
+Quadratic Discriminant Analysis,recall_score,0.9809,ptbdb,ensembling-models
+Dummy Classifier,recall_score,1.0,ptbdb,ensembling-models
+Extra Trees Classifier,precision_score,0.9913,ptbdb,ensembling-models
+K Neighbors Classifier,precision_score,0.9912,ptbdb,ensembling-models
+CatBoost Classifier,precision_score,0.99,ptbdb,ensembling-models
+Logistic Regression,precision_score,0.9906,ptbdb,ensembling-models
+Decision Tree Classifier,precision_score,0.9906,ptbdb,ensembling-models
+Ridge Classifier,precision_score,0.9906,ptbdb,ensembling-models
+Linear Discriminant Analysis,precision_score,0.9906,ptbdb,ensembling-models
+Extreme Gradient Boosting,precision_score,0.9893,ptbdb,ensembling-models
+Light Gradient Boosting Machine,precision_score,0.99,ptbdb,ensembling-models
+Random Forest Classifier,precision_score,0.9886,ptbdb,ensembling-models
+Gradient Boosting Classifier,precision_score,0.9886,ptbdb,ensembling-models
+Ada Boost Classifier,precision_score,0.9919,ptbdb,ensembling-models
+SVM - Linear Kernel,precision_score,0.9892,ptbdb,ensembling-models
+Naive Bayes,precision_score,0.9959,ptbdb,ensembling-models
+Quadratic Discriminant Analysis,precision_score,0.9939,ptbdb,ensembling-models
+Dummy Classifier,precision_score,0.7207,ptbdb,ensembling-models
+Extra Trees Classifier,f1_score,0.9936,ptbdb,ensembling-models
+K Neighbors Classifier,f1_score,0.9929,ptbdb,ensembling-models
+CatBoost Classifier,f1_score,0.9929,ptbdb,ensembling-models
+Logistic Regression,f1_score,0.9925,ptbdb,ensembling-models
+Decision Tree Classifier,f1_score,0.9925,ptbdb,ensembling-models
+Ridge Classifier,f1_score,0.9925,ptbdb,ensembling-models
+Linear Discriminant Analysis,f1_score,0.9925,ptbdb,ensembling-models
+Extreme Gradient Boosting,f1_score,0.9926,ptbdb,ensembling-models
+Light Gradient Boosting Machine,f1_score,0.9925,ptbdb,ensembling-models
+Random Forest Classifier,f1_score,0.9922,ptbdb,ensembling-models
+Gradient Boosting Classifier,f1_score,0.9922,ptbdb,ensembling-models
+Ada Boost Classifier,f1_score,0.9908,ptbdb,ensembling-models
+SVM - Linear Kernel,f1_score,0.9902,ptbdb,ensembling-models
+Naive Bayes,f1_score,0.9883,ptbdb,ensembling-models
+Quadratic Discriminant Analysis,f1_score,0.9873,ptbdb,ensembling-models
+Dummy Classifier,f1_score,0.8377,ptbdb,ensembling-models
+Extra Trees Classifier,cohen_kappa_score,0.9766,ptbdb,ensembling-models
+K Neighbors Classifier,cohen_kappa_score,0.9742,ptbdb,ensembling-models
+CatBoost Classifier,cohen_kappa_score,0.9741,ptbdb,ensembling-models
+Logistic Regression,cohen_kappa_score,0.973,ptbdb,ensembling-models
+Decision Tree Classifier,cohen_kappa_score,0.973,ptbdb,ensembling-models
+Ridge Classifier,cohen_kappa_score,0.973,ptbdb,ensembling-models
+Linear Discriminant Analysis,cohen_kappa_score,0.973,ptbdb,ensembling-models
+Extreme Gradient Boosting,cohen_kappa_score,0.9729,ptbdb,ensembling-models
+Light Gradient Boosting Machine,cohen_kappa_score,0.9729,ptbdb,ensembling-models
+Random Forest Classifier,cohen_kappa_score,0.9717,ptbdb,ensembling-models
+Gradient Boosting Classifier,cohen_kappa_score,0.9717,ptbdb,ensembling-models
+Ada Boost Classifier,cohen_kappa_score,0.967,ptbdb,ensembling-models
+SVM - Linear Kernel,cohen_kappa_score,0.9645,ptbdb,ensembling-models
+Naive Bayes,cohen_kappa_score,0.9591,ptbdb,ensembling-models
+Quadratic Discriminant Analysis,cohen_kappa_score,0.9554,ptbdb,ensembling-models
+Dummy Classifier,cohen_kappa_score,0.0,ptbdb,ensembling-models
+Extra Trees Classifier,matthews_corrcoef,0.9769,ptbdb,ensembling-models
+K Neighbors Classifier,matthews_corrcoef,0.9744,ptbdb,ensembling-models
+CatBoost Classifier,matthews_corrcoef,0.9744,ptbdb,ensembling-models
+Logistic Regression,matthews_corrcoef,0.9731,ptbdb,ensembling-models
+Decision Tree Classifier,matthews_corrcoef,0.9732,ptbdb,ensembling-models
+Ridge Classifier,matthews_corrcoef,0.9731,ptbdb,ensembling-models
+Linear Discriminant Analysis,matthews_corrcoef,0.9731,ptbdb,ensembling-models
+Extreme Gradient Boosting,matthews_corrcoef,0.9732,ptbdb,ensembling-models
+Light Gradient Boosting Machine,matthews_corrcoef,0.9732,ptbdb,ensembling-models
+Random Forest Classifier,matthews_corrcoef,0.972,ptbdb,ensembling-models
+Gradient Boosting Classifier,matthews_corrcoef,0.972,ptbdb,ensembling-models
+Ada Boost Classifier,matthews_corrcoef,0.9672,ptbdb,ensembling-models
+SVM - Linear Kernel,matthews_corrcoef,0.9647,ptbdb,ensembling-models
+Naive Bayes,matthews_corrcoef,0.9597,ptbdb,ensembling-models
+Quadratic Discriminant Analysis,matthews_corrcoef,0.956,ptbdb,ensembling-models
+Dummy Classifier,matthews_corrcoef,0.0,ptbdb,ensembling-models
+Extra Trees Classifier,balanced_accuracy_score,0.9865,ptbdb,ensembling-models
+K Neighbors Classifier,balanced_accuracy_score,0.9858,ptbdb,ensembling-models
+CatBoost Classifier,balanced_accuracy_score,0.9847,ptbdb,ensembling-models
+Logistic Regression,balanced_accuracy_score,0.9849,ptbdb,ensembling-models
+Decision Tree Classifier,balanced_accuracy_score,0.9849,ptbdb,ensembling-models
+Ridge Classifier,balanced_accuracy_score,0.9849,ptbdb,ensembling-models
+Linear Discriminant Analysis,balanced_accuracy_score,0.9849,ptbdb,ensembling-models
+Extreme Gradient Boosting,balanced_accuracy_score,0.9839,ptbdb,ensembling-models
+Light Gradient Boosting Machine,balanced_accuracy_score,0.9844,ptbdb,ensembling-models
+Random Forest Classifier,balanced_accuracy_score,0.983,ptbdb,ensembling-models
+Gradient Boosting Classifier,balanced_accuracy_score,0.983,ptbdb,ensembling-models
+Ada Boost Classifier,balanced_accuracy_score,0.9843,ptbdb,ensembling-models
+SVM - Linear Kernel,balanced_accuracy_score,0.9815,ptbdb,ensembling-models
+Naive Bayes,balanced_accuracy_score,0.9852,ptbdb,ensembling-models
+Quadratic Discriminant Analysis,balanced_accuracy_score,0.9825,ptbdb,ensembling-models
+Dummy Classifier,balanced_accuracy_score,0.5,ptbdb,ensembling-models
+WeightedEnsemble_L3,accuracy,0.987756127646938,mitbih,automl-baseline
+LightGBM_BAG_L2,accuracy,0.9875048541471548,mitbih,automl-baseline
+XGBoost_BAG_L2,accuracy,0.9874934326244376,mitbih,automl-baseline
+NeuralNetFastAI_BAG_L2,accuracy,0.9874705895790028,mitbih,automl-baseline
+RandomForestEntr_BAG_L2,accuracy,0.9874020604426982,mitbih,automl-baseline
+RandomForestGini_BAG_L2,accuracy,0.987253580647372,mitbih,automl-baseline
+LightGBMXT_BAG_L2,accuracy,0.9872078945565024,mitbih,automl-baseline
+LightGBMLarge_BAG_L2,accuracy,0.9871850515110676,mitbih,automl-baseline
+ExtraTreesGini_BAG_L2,accuracy,0.9870936793293282,mitbih,automl-baseline
+CatBoost_BAG_L2,accuracy,0.9870251501930236,mitbih,automl-baseline
+ExtraTreesEntr_BAG_L2,accuracy,0.9870251501930236,mitbih,automl-baseline
+WeightedEnsemble_L2,accuracy,0.9867053475569364,mitbih,automl-baseline
+NeuralNetFastAI_BAG_L1,accuracy,0.9860885853301964,mitbih,automl-baseline
+LightGBMXT_BAG_L1,accuracy,0.9854718231034562,mitbih,automl-baseline
+NeuralNetTorch_BAG_L2,accuracy,0.9836101149005184,mitbih,automl-baseline
+LightGBM_BAG_L1,accuracy,0.9832674692189964,mitbih,automl-baseline
+RandomForestEntr_BAG_L1,accuracy,0.976494506247573,mitbih,automl-baseline
+RandomForestGini_BAG_L1,accuracy,0.9760604883843114,mitbih,automl-baseline
+KNeighborsDist_BAG_L1,accuracy,0.9757064211800718,mitbih,automl-baseline
+KNeighborsUnif_BAG_L1,accuracy,0.9749183361125704,mitbih,automl-baseline
+WeightedEnsemble_L3,roc_auc_score,0.9911527228998454,ptbdb,automl-baseline
+LightGBM_BAG_L2,roc_auc_score,0.9909809311114928,ptbdb,automl-baseline
+NeuralNetFastAI_BAG_L2,roc_auc_score,0.9909809311114928,ptbdb,automl-baseline
+LightGBMLarge_BAG_L2,roc_auc_score,0.9906373475347878,ptbdb,automl-baseline
+WeightedEnsemble_L2,roc_auc_score,0.9899501803813776,ptbdb,automl-baseline
+CatBoost_BAG_L2,roc_auc_score,0.9898642844872017,ptbdb,automl-baseline
+XGBoost_BAG_L2,roc_auc_score,0.9896065968046728,ptbdb,automl-baseline
+LightGBMXT_BAG_L2,roc_auc_score,0.9892630132279676,ptbdb,automl-baseline
+ExtraTreesEntr_BAG_L2,roc_auc_score,0.989005325545439,ptbdb,automl-baseline
+RandomForestEntr_BAG_L2,roc_auc_score,0.989005325545439,ptbdb,automl-baseline
+RandomForestGini_BAG_L2,roc_auc_score,0.9887476378629102,ptbdb,automl-baseline
+ExtraTreesGini_BAG_L2,roc_auc_score,0.9884040542862051,ptbdb,automl-baseline
+NeuralNetFastAI_BAG_L1,roc_auc_score,0.98737330355609,ptbdb,automl-baseline
+NeuralNetTorch_BAG_L2,roc_auc_score,0.9869438240852088,ptbdb,automl-baseline
+LightGBM_BAG_L1,roc_auc_score,0.98599896924927,ptbdb,automl-baseline
+LightGBMXT_BAG_L1,roc_auc_score,0.9854835938842124,ptbdb,automl-baseline
+LightGBMLarge_BAG_L1,roc_auc_score,0.9839374677890396,ptbdb,automl-baseline
+XGBoost_BAG_L1,roc_auc_score,0.9818759663288096,ptbdb,automl-baseline
+RandomForestEntr_BAG_L1,roc_auc_score,0.9766363167840576,ptbdb,automl-baseline
+ExtraTreesEntr_BAG_L1,roc_auc_score,0.9765504208898814,ptbdb,automl-baseline
+NeuralNetTorch_BAG_L1,roc_auc_score,0.9762927332073528,ptbdb,automl-baseline
+CatBoost_BAG_L1,roc_auc_score,0.975347878371414,ptbdb,automl-baseline
+ExtraTreesGini_BAG_L1,roc_auc_score,0.9748325030063564,ptbdb,automl-baseline
+RandomForestGini_BAG_L1,roc_auc_score,0.9725133138635972,ptbdb,automl-baseline
+KNeighborsDist_BAG_L1,roc_auc_score,0.9359216629445112,ptbdb,automl-baseline
+KNeighborsUnif_BAG_L1,roc_auc_score,0.9320563477065796,ptbdb,automl-baseline
