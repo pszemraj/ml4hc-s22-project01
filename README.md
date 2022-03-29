@@ -8,6 +8,26 @@ this repo contains the code for the first problem of the Machine Learning for He
 
 This repo primarily aims as a central home for the data processing piece, EDA and analysis, as well as the model training and evaluation.
 
+## Results - Preview
+
+### MITBIH dataset
+
+Here, we compare accuracy of several different models, trained via standard keras, autoML, and ensemble methods on the MITBIH dataset.
+
+![mitbih-accuracy-static-prestheme](https://user-images.githubusercontent.com/74869040/160694309-4226dc59-601e-4342-a87d-9d97a2c0c548.png)
+
+
+- an interactive version of our model results on MIT-BIH (tooltips, etc.) is available as an [app on Netlify](https://mitbih-pred-acc.netlify.app/)
+
+### PTBDB dataset
+
+Here, we compare the ROC AUC score of several different models, trained via standard keras, autoML, and ensemble methods on the PTBDB dataset.
+
+![ptbdb-ROCAUC-static-prestheme](https://user-images.githubusercontent.com/74869040/160694360-92e58f18-8ee2-4940-8265-5af0837e2b7b.png)
+
+
+- an interactive version of our model results on PTBDB (tooltips, etc.) is available as an [app on Netlify](https://ptbdb-pred-rocauc.netlify.app/)
+
 ## Installation
 
 - for using the repo locally (EDA, analysis) the primary method to install is clone + pip install.
