@@ -58,8 +58,6 @@ fig_box = px.box(df_acc, x="dataset", y="metric_value", color="source")
 # %%
 
 
-
-
 df_mitbih = df[df.dataset == "mitbih"]
 df_mitbih = df_mitbih[df_mitbih.performance_metric == "accuracy"]
 
