@@ -30,6 +30,8 @@ metric_map = {
     "Prec.": "precision_score",
     "Recall": "recall_score",
     "Kappa": "cohen_kappa_score",
+    "roc_auc_val": "roc_auc_score",
+    "accuracy_val": "accuracy",
 }
 # %%
 
@@ -52,7 +54,7 @@ def get_unique_cols(csv_paths: list):
     _dfs = [pd.read_csv(f) for f in csv_paths]
     _cols = [list(df.columns) for df in _dfs]
     # find the unique column names between all files and dataframes
-    _cols = set.intersection(*map(set, _cols))
+    _cols = set.union(*map(set, _cols))
     return _cols
 
 
@@ -111,6 +113,11 @@ overall_results.reset_index(drop=True, inplace=True)
 overall_results["source"] = "initial-training"
 overall_results.head()
 
+# %% [markdown]
+# ---
+# ## load files from ensemble-training
+# - the second datasets define the mapping between the classes and the letters used in the dataset
+
 # %%
 # load files from ensemble-training
 key_phrase = "fit_search"
@@ -124,7 +131,6 @@ print(f"{len(_csv_paths)} CSV files found in {_ensemble_root.name}")
 # %%
 
 col_names = get_unique_cols(_csv_paths)
-print(f"{col_names} columns found in {_ensemble_root.name}")
 
 not_in_map = [c for c in col_names if c not in metric_map.keys()]
 if len(not_in_map) > 0:
@@ -187,5 +193,81 @@ for f in _csv_paths:
 
 overall_results.info()
 # %%
-overall_results.value_counts()
+overall_results.source.value_counts()
+overall_results.performance_metric.value_counts()
+# %% [markdown]
+# ---
+# ## load files from autogluon
 # %%
+# load files from results\automl-baseline
+key_phrase = "autogluon"
+# load CSV paths in initial-training directory that contain the key phrase
+_autoML_root = result_dirs["automl-baseline"]
+_autoML_csv_paths = [
+    f for f in _autoML_root.iterdir() if f.is_file() and key_phrase in f.name.lower()
+]
+print(f"{len(_autoML_csv_paths)} CSV files found in {_autoML_root.name}")
+
+# %%
+
+col_names = get_unique_cols(_autoML_csv_paths)
+
+not_in_map = [c for c in col_names if c not in metric_map.keys()]
+if len(not_in_map) > 0:
+    print(f"{len(not_in_map)} columns not in map: \n{not_in_map}")
+
+# %%
+
+
+
+for f in _autoML_csv_paths:
+    df = pd.read_csv(f).convert_dtypes()
+    _cols = list(df.columns)
+    _cols = [
+        c if c != "model" else "model_filename" for c in _cols
+    ]  # replace the column name Model by 'model_filename'
+    df.columns = _cols
+    new_cols = []
+    for colname in list(df.columns):
+        # check if the column name is in the mapping dictionary, if not, delete the column
+        std_name = check_mapping(colname, metric_map, exclude_list=["model_filename"])
+        if not std_name:
+            del df[colname]
+        else:
+            new_cols.append(std_name)
+
+    df.columns = new_cols
+    _cols = list(df.columns)
+    _cols.remove("model_filename")
+    # all column entries except for the model file name now become one column titled performance_metric using pd.melt
+    df = pd.melt(
+        df,
+        id_vars=["model_filename"],
+        value_vars=_cols,
+        var_name="performance_metric",
+        value_name="metric_value",
+    )
+    df["dataset"] = "mitbih" if "mitbih" in f.name.lower() else "ptbdb"
+    df["source"] = "automl-baseline"
+    overall_results = pd.concat([overall_results, df], axis=0)
+
+overall_results = overall_results.convert_dtypes()
+
+overall_results.info()
+# %%
+overall_results.source.value_counts()
+overall_results.performance_metric.value_counts()
+
+# %% [markdown]
+# ---
+# ## save combined results
+# %%
+
+_save_header = results_dir / "compiled_trained_model_performance"
+
+overall_results.reset_index(drop=True, inplace=True)
+
+overall_results.to_csv(_save_header.with_suffix(".csv"), index=False)
+overall_results.to_excel(_save_header.with_suffix(".xlsx"), index=False)
+
+
