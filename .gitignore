@@ -13,3 +13,6 @@
 # scratch files
 *scratch*
 *scratch/
+
+# results files (use git add -f to add new ones if needed)
+*results/
