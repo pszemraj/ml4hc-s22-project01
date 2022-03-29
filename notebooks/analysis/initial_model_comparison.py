@@ -1,5 +1,5 @@
 """
-    eda_autoviz.py - a notebook to visualize the data and compare the results of different methods
+    notebooks\analysis\initial_model_comparison.py - a notebook to visualize the data and compare the results of different methods
 """
 
 # %%
@@ -23,18 +23,7 @@ filename = res_dir / "compiled_trained_model_performance.csv"
 df = pd.read_csv(str(filename.resolve()))
 df.info()
 
-# %%
 
-df.performance_metric.value_counts()
-
-# %%
-
-from pandas_profiling import ProfileReport
-
-profile = ProfileReport(
-    df, title="Model Performance - Overall", explorative=True, dark_mode=True
-)
-# profile.to_file(str(plot_out_dir / "model_performance_overall.html"))
 # %%
 
 import plotly.express as px
@@ -42,7 +31,7 @@ import plotly.express as px
 height = 600
 width = int(height * 1.618)
 
-f1_df = df[df.performance_metric == "f1_score"]
+f1_df = df[df.performance_metric == "accuracy"]
 fig_env = px.violin(f1_df, x="source", y="metric_value", color="source")
 
 fig_env.show()
@@ -69,10 +58,6 @@ fig_box = px.box(df_acc, x="dataset", y="metric_value", color="source")
 # %%
 
 
-df_autoML = df[df.source == "automl-baseline"]
-
-df_autoML
-# %%
 
 
 df_mitbih = df[df.dataset == "mitbih"]
@@ -94,7 +79,7 @@ mit_top = px.box(
     x="source",
     y="metric_value",
     color="source",
-    template="seaborn",
+    template="presentation",
     labels=mit_labels,
     hover_data=["model_filename", "dataset", "source", "metric_value"],
     points="all",
@@ -104,7 +89,8 @@ mit_top = px.box(
 )
 mit_top.show()
 
-
+mit_top.write_html(str(plot_out_dir / "mitbih_accuracy_comparison.html"))
+# mit_top.write_image(str(plot_out_dir / "mitbih_accuracy_comparison.jpg"),  format="jpg", engine="kaleido")
 # %%
 
 df_ptbdb = df[df.dataset == "ptbdb"]
@@ -124,7 +110,7 @@ ptb_top = px.box(
     x="source",
     y="metric_value",
     color="source",
-    template="ggplot2",
+    template="presentation",
     labels=ptb_labels,
     hover_data=["model_filename", "dataset", "source", "metric_value"],
     points="all",
@@ -133,4 +119,8 @@ ptb_top = px.box(
     title="PTBDB - ROC AUC Score",
 )
 ptb_top.show()
+# %%
+
+ptb_top.write_html(str(plot_out_dir / "ptbdb_roc_auc_comparison.html"))
+# ptb_top.write_image(str(plot_out_dir / "ptbdb_roc_auc_comparison.jpg"), format="jpg", engine="kaleido")
 # %%
