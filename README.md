@@ -14,8 +14,8 @@ This repo primarily aims as a central home for the data processing piece, EDA an
 
 Here, we compare accuracy of several different models, trained via standard keras, autoML, and ensemble methods on the MITBIH dataset.
 
-<!-- display the HTML plot at local path results\figures\model-analysis\mitbih_accuracy_comparison.html inline -->
-<iframe src="results/figures/model-analysis/mitbih_accuracy_comparison.html" width="100%" height="500px"></iframe>
+![mitbih-accuracy-static-prestheme](https://user-images.githubusercontent.com/74869040/160694309-4226dc59-601e-4342-a87d-9d97a2c0c548.png)
+
 
 - an interactive version of our model results on MIT-BIH (tooltips, etc.) is available as an [app on Netlify](https://mitbih-pred-acc.netlify.app/)
 
@@ -23,8 +23,8 @@ Here, we compare accuracy of several different models, trained via standard kera
 
 Here, we compare the ROC AUC score of several different models, trained via standard keras, autoML, and ensemble methods on the PTBDB dataset.
 
-<!-- display the HTML plot at local path results\figures\model-analysis\ptbdb_roc_auc_comparison.html inline -->
-<iframe src="results/figures/model-analysis/ptbdb_roc_auc_comparison.html" width="100%" height="500px"></iframe>
+![ptbdb-ROCAUC-static-prestheme](https://user-images.githubusercontent.com/74869040/160694360-92e58f18-8ee2-4940-8265-5af0837e2b7b.png)
+
 
 - an interactive version of our model results on PTBDB (tooltips, etc.) is available as an [app on Netlify](https://ptbdb-pred-rocauc.netlify.app/)
 
